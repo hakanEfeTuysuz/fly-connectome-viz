@@ -1,0 +1,5 @@
+neuprint-python
+pandas
+networkx
+plotly
+python-dotenv
