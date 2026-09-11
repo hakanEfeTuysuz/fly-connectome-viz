@@ -3,3 +3,6 @@ pandas
 networkx
 plotly
 python-dotenv
+kaleido
+pillow
+numpy

@@ -4,7 +4,7 @@ Bu proje, yetişkin bir meyve sineğinin (*Drosophila melanogaster*) beyin harit
 
 Janelia Research Campus tarafından sağlanan **hemibrain** veri seti kullanılarak, beynin koku alma (Antennal Lobe), uzamsal yönelim (Ellipsoid Body), hafıza (Mushroom Body) ve görme (Medulla) gibi kritik merkezleri neuPrint API üzerinden çekilmiş ve modellenmiştir.
 
-![Demo](demo.png)
+![Demo](demo.gif)
 
 ### 🎨 Renk Lejantı
 
@@ -22,11 +22,12 @@ Janelia Research Campus tarafından sağlanan **hemibrain** veri seti kullanıla
 * **Büyük Veri Optimizasyonu:** Pandas kullanılarak karmaşık veri setlerinin (nodes & edges) temizlenmesi ve filtrelenmesi.
 * **Gerçek Anatomik Konumlandırma:** Nöronlar, soyut bir düzen yerine gerçek 3D soma (hücre gövdesi) koordinatlarına göre yerleştirilir.
 * **İnteraktif 3D Görselleştirme:** Plotly kullanılarak, nöron tiplerinin ve işlevlerinin incelenebildiği, bölge bazlı renklendirilmiş 3D grafik (HTML) çıktısı üretimi.
+* **Otomatik Dönen GIF Önizlemesi:** Kaleido ve Pillow kullanılarak sahnenin 360° etrafından render edilmiş, README üzerinde otomatik oynayan bir önizleme üretimi.
 
 ## 🛠️ Kullanılan Teknolojiler
 
 * **Dil:** Python
-* **Kütüphaneler:** Pandas, Plotly, NetworkX, Neuprint-python, Python-dotenv
+* **Kütüphaneler:** Pandas, Plotly, NetworkX, Neuprint-python, Python-dotenv, Kaleido, Pillow, NumPy
 * **Çevre:** Ubuntu, VS Code, Git
 
 ## 📦 Kurulum
@@ -68,6 +69,12 @@ python visualize_atlas.py
 ```
 
 Her ikisi de çalıştırıldıktan sonra tarayıcıda otomatik açılan bir `.html` dosyası üretir; fare ile döndürüp yakınlaştırabilir, nöronların üzerine gelerek tip ve işlev bilgisini görebilirsiniz.
+
+Dönen GIF önizlemesini yeniden üretmek için (`atlas_neurons.csv` ve `atlas_edges.csv` dosyaları önceden oluşturulmuş olmalı):
+
+```bash
+python make_gif.py
+```
 
 ## 📊 Beyin Bölgeleri ve İşlevleri
 
