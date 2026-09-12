@@ -19,7 +19,7 @@ REGIONS = {
     'ME(R)': ('Medulla (Optic Lobe)', 'Görme - ilk işleme'),
 }
 
-MAX_PER_REGION = 150  # performans için her bölgeden en fazla bu kadar nöron
+MAX_PER_REGION = 500  # performans için her bölgeden en fazla bu kadar nöron
 
 all_neurons = []
 
